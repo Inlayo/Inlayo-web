@@ -61,8 +61,9 @@ def root():
         <a href="/osu">osu!</a>
         <a href="/skins">skins</a>
         <a href="/tw">twitter</a>
-        <a href="/twitch">twitch</a>
+        <a href="/ttv">twitch</a>
         <a href="/yt">youtube</a>
+        <a href="/gh">github</a>
         <a href="/discord">discord</a>
     </div>
 </body>
@@ -89,12 +90,17 @@ def redirect_to_twitter():
 def redirect_to_youtube():
     return RedirectResponse(url="https://youtube.com/@Inlayo23", status_code=302)
 
+@app.get("/gh")
+@app.get("/github")
+def redirect_to_github():
+    return RedirectResponse(url="https://github.com/Inlayo", status_code=302)
 
 @app.get("/osu")
 def redirect_to_osu():
     return RedirectResponse(url="https://osu.ppy.sh/users/27692994", status_code=302)
 
 
+@app.get("/ttv")
 @app.get("/twitch")
 def redirect_to_twitch():
     return RedirectResponse(url="https://twitch.tv/Inlayo", status_code=302)
