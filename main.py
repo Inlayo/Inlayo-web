@@ -1,3 +1,19 @@
+import subprocess
+import sys
+import os
+
+def install_requirements():
+    try:
+        import fastapi
+    except ImportError:
+        requirements_file = os.path.join(os.path.dirname(__file__), "requirements.txt")
+        if os.path.exists(requirements_file):
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "-r", requirements_file])
+        else:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "fastapi", "uvicorn"])
+
+install_requirements()
+
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse, HTMLResponse
 
