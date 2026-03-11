@@ -1,15 +1,6 @@
 import subprocess
 import sys
 
-def install_requirements():
-    try:
-        import fastapi
-    except ImportError:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "fastapi", "uvicorn[standard]"])
-        sys.exit(0) 
-
-install_requirements()
-
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse, HTMLResponse
 
