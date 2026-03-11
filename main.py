@@ -6,6 +6,8 @@ def install_requirements():
         import fastapi
     except ImportError:
         try:
+            subprocess.check_call([sys.executable, "-m", "ensurepip", "--upgrade"], 
+                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "fastapi", "uvicorn[standard]"])
         except Exception as e:
             print(f"{e}")
