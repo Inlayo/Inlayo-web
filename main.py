@@ -58,11 +58,11 @@ def root():
     <div class="container">
         <h1>hello i'm Inlayo💩</h1>
 
+        <a href="/osu">osu!</a>
         <a href="/skins">skins</a>
         <a href="/tw">twitter</a>
-        <a href="/yt">youtube</a>
-        <a href="/osu">osu!</a>
         <a href="/twitch">twitch</a>
+        <a href="/yt">youtube</a>
         <a href="/discord">discord</a>
     </div>
 </body>
@@ -87,7 +87,7 @@ def redirect_to_twitter():
 @app.get("/yt")
 @app.get("/youtube")
 def redirect_to_youtube():
-    return RedirectResponse(url="https://youtube.com/@Inlay123", status_code=302)
+    return RedirectResponse(url="https://youtube.com/@Inlayo23", status_code=302)
 
 
 @app.get("/osu")
