@@ -18,11 +18,18 @@ def root():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
 @keyframes bgMove {
 0% {background-position:0% 50%}
 50% {background-position:100% 50%}
 100% {background-position:0% 50%}
+}
+
+@keyframes glowPulse {
+0% {opacity:.4}
+50% {opacity:.8}
+100% {opacity:.4}
 }
 
 html, body {
@@ -36,19 +43,36 @@ height:100dvh;
 display:grid;
 place-items:center;
 
-font-family:Segoe UI, sans-serif;
+font-family:'Schoolbell', cursive;
 color:white;
 
-background: linear-gradient(
--45deg,
-#2b2d42,
-#3a3d5c,
-#3f3a57,
-#2f3f46
-);
-
+background: linear-gradient(-45deg,#2b2d42,#3a3d5c,#3f3a57,#2f3f46);
 background-size:300% 300%;
 animation:bgMove 16s ease infinite;
+}
+
+body::before,
+body::after{
+content:"";
+position:fixed;
+width:420px;
+height:420px;
+border-radius:50%;
+filter:blur(120px);
+z-index:-1;
+animation:glowPulse 6s ease-in-out infinite;
+}
+
+body::before{
+background:#a78bfa;
+top:-120px;
+left:-120px;
+}
+
+body::after{
+background:#7dd3fc;
+bottom:-120px;
+right:-120px;
 }
 
 .card {
@@ -68,17 +92,15 @@ backdrop-filter: blur(16px);
 border-radius:18px;
 
 box-shadow:
+0 0 30px rgba(180,160,255,0.15),
 0 10px 40px rgba(0,0,0,0.45);
 
 box-sizing:border-box;
-
 }
 
 h1 {
-margin-bottom:28px;
-font-weight:500;
-color:#f1f1f1;
-font-size:24px;
+margin-bottom:26px;
+font-size:26px;
 text-align:center;
 }
 
@@ -96,7 +118,6 @@ padding:13px;
 border-radius:10px;
 
 text-decoration:none;
-font-weight:500;
 
 color:#f0f0f0;
 
@@ -105,37 +126,56 @@ background:rgba(255,255,255,0.08);
 transition: all .25s ease;
 
 box-sizing:border-box;
-
 }
 
-a:hover {
+/* hover color effects */
 
-transform: translateY(-2px);
-
-background: rgba(255,255,255,0.15);
-
+.osu:hover{
 box-shadow:
-0 0 14px rgba(210,180,255,0.35),
-0 0 18px rgba(150,200,255,0.25);
-
+0 0 18px rgba(255,102,170,.8),
+0 0 28px rgba(255,102,170,.5);
 }
 
-@media (max-width:480px){
-
-.card{
-width:75vw;
-padding:28px 20px;
+.skins:hover{
+box-shadow:
+0 0 18px rgba(255,255,255,.8),
+0 0 28px rgba(255,255,255,.5);
 }
 
-h1{
-font-size:20px;
+.twitter:hover{
+box-shadow:
+0 0 18px rgba(29,161,242,.9),
+0 0 28px rgba(29,161,242,.6);
 }
 
-a{
-font-size:15px;
-padding:12px;
+.twitch:hover{
+box-shadow:
+0 0 18px rgba(145,70,255,.9),
+0 0 28px rgba(145,70,255,.6);
 }
 
+.youtube:hover{
+box-shadow:
+0 0 18px rgba(255,0,0,.9),
+0 0 28px rgba(255,0,0,.6);
+}
+
+.github:hover{
+box-shadow:
+0 0 18px rgba(255,255,255,.9),
+0 0 28px rgba(255,255,255,.6);
+}
+
+.discord:hover{
+box-shadow:
+0 0 18px rgba(88,101,242,.9),
+0 0 28px rgba(88,101,242,.6);
+}
+
+.footer{
+margin-top:18px;
+font-size:13px;
+opacity:.6;
 }
 
 </style>
@@ -147,13 +187,17 @@ padding:12px;
 
 <h1>hello i'm Inlayo 💩</h1>
 
-<a href="/osu" target="_blank" rel="noopener">osu!</a>
-<a href="/skins" target="_blank" rel="noopener">skins</a>
-<a href="/tw" target="_blank" rel="noopener">twitter</a>
-<a href="/ttv" target="_blank" rel="noopener">twitch</a>
-<a href="/yt" target="_blank" rel="noopener">youtube</a>
-<a href="/gh" target="_blank" rel="noopener">github</a>
-<a href="/discord" target="_blank" rel="noopener">discord</a>
+<a class="osu" href="/osu" target="_blank" rel="noopener">osu!</a>
+<a class="skins" href="/skins" target="_blank" rel="noopener">skins</a>
+<a class="twitter" href="/tw" target="_blank" rel="noopener">twitter</a>
+<a class="twitch" href="/ttv" target="_blank" rel="noopener">twitch</a>
+<a class="youtube" href="/yt" target="_blank" rel="noopener">youtube</a>
+<a class="github" href="/gh" target="_blank" rel="noopener">github</a>
+<a class="discord" href="/discord" target="_blank" rel="noopener">discord</a>
+
+<div class="footer">
+© 2026 Inlayo
+</div>
 
 </div>
 
