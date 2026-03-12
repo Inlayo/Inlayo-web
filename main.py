@@ -13,59 +13,92 @@ def root():
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inlayo</title>
-    <meta charset="utf-8">
-    <style>
-        body {
-            background-color: #1f1f1f;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-        }
+<title>Inlayo</title>
+<meta charset="utf-8">
 
-        .container {
-            text-align: center;
-        }
+<style>
 
-        h1 {
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
+@keyframes gradientMove {
+0% {background-position: 0% 50%}
+50% {background-position: 100% 50%}
+100% {background-position: 0% 50%}
+}
 
-        a {
-            display: block;
-            width: 200px;
-            margin: 8px auto;
-            padding: 10px;
-            color: #ffffff;
-            text-decoration: none;
-            background: #2a2a2a;
-            border-radius: 8px;
-            transition: background 0.2s, transform 0.1s;
-        }
+@keyframes float {
+0% {transform: translateY(0px)}
+50% {transform: translateY(-10px)}
+100% {transform: translateY(0px)}
+}
 
-        a:hover {
-            background: #3a3a3a;
-            transform: translateY(-2px);
-        }
-    </style>
+body {
+margin: 0;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: "Segoe UI", sans-serif;
+
+background: linear-gradient(-45deg,#ffd6e7,#e5d4ff,#d4f1ff,#ffe6c7);
+background-size: 400% 400%;
+animation: gradientMove 15s ease infinite;
+}
+
+.card {
+backdrop-filter: blur(15px);
+background: rgba(255,255,255,0.25);
+border-radius: 20px;
+padding: 40px;
+width: 320px;
+text-align: center;
+box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+animation: float 6s ease-in-out infinite;
+}
+
+h1 {
+margin-bottom: 30px;
+font-weight: 600;
+color: #333;
+}
+
+a {
+display: block;
+margin: 10px auto;
+padding: 12px;
+border-radius: 12px;
+text-decoration: none;
+
+background: rgba(255,255,255,0.7);
+color: #333;
+font-weight: 500;
+
+transition: all 0.25s ease;
+}
+
+a:hover {
+transform: translateY(-4px) scale(1.03);
+box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+background: white;
+}
+
+</style>
 </head>
-<body>
-    <div class="container">
-        <h1>hello i'm Inlayo💩</h1>
 
-        <a href="/osu">osu!</a>
-        <a href="/skins">skins</a>
-        <a href="/tw">twitter</a>
-        <a href="/ttv">twitch</a>
-        <a href="/yt">youtube</a>
-        <a href="/gh">github</a>
-        <a href="/discord">discord</a>
-    </div>
+<body>
+
+<div class="card">
+
+<h1>hello i'm Inlayo 💩</h1>
+
+<a href="/osu">osu!</a>
+<a href="/skins">skins</a>
+<a href="/tw">twitter</a>
+<a href="/ttv">twitch</a>
+<a href="/yt">youtube</a>
+<a href="/gh">github</a>
+<a href="/discord">discord</a>
+
+</div>
+
 </body>
 </html>
 """
@@ -90,10 +123,12 @@ def redirect_to_twitter():
 def redirect_to_youtube():
     return RedirectResponse(url="https://youtube.com/@Inlayo23", status_code=302)
 
+
 @app.get("/gh")
 @app.get("/github")
 def redirect_to_github():
     return RedirectResponse(url="https://github.com/Inlayo", status_code=302)
+
 
 @app.get("/osu")
 def redirect_to_osu():
