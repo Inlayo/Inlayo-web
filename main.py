@@ -18,7 +18,7 @@ def root():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
 
 @keyframes bgMove {
 0% {background-position:0% 50%}
@@ -43,7 +43,9 @@ height:100dvh;
 display:grid;
 place-items:center;
 
-font-family:'Schoolbell', cursive;
+font-family:"Comic Relief", system-ui;
+font-weight:400;
+
 color:white;
 
 background: linear-gradient(-45deg,#2b2d42,#3a3d5c,#3f3a57,#2f3f46);
@@ -101,6 +103,7 @@ box-sizing:border-box;
 h1 {
 margin-bottom:26px;
 font-size:26px;
+font-weight:700;
 text-align:center;
 }
 
@@ -128,18 +131,16 @@ transition: all .25s ease;
 box-sizing:border-box;
 }
 
-/* hover color effects */
-
 .osu:hover{
 box-shadow:
-0 0 18px rgba(255,102,170,.8),
-0 0 28px rgba(255,102,170,.5);
+0 0 18px rgba(255,102,170,.9),
+0 0 28px rgba(255,102,170,.6);
 }
 
 .skins:hover{
 box-shadow:
-0 0 18px rgba(255,255,255,.8),
-0 0 28px rgba(255,255,255,.5);
+0 0 18px rgba(255,255,255,.9),
+0 0 28px rgba(255,255,255,.6);
 }
 
 .twitter:hover{
@@ -176,6 +177,24 @@ box-shadow:
 margin-top:18px;
 font-size:13px;
 opacity:.6;
+}
+
+@media (max-width:480px){
+
+.card{
+width:75vw;
+padding:28px 20px;
+}
+
+h1{
+font-size:22px;
+}
+
+a{
+font-size:15px;
+padding:12px;
+}
+
 }
 
 </style>
