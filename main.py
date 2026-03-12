@@ -40,8 +40,10 @@ overflow:hidden;
 
 body {
 height:100dvh;
-display:grid;
-place-items:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 
 font-family:"Comic Relief", system-ui;
 font-weight:400;
@@ -174,7 +176,7 @@ box-shadow:
 }
 
 .footer{
-margin-top:18px;
+margin-top:14px;
 font-size:13px;
 opacity:.6;
 }
@@ -214,10 +216,10 @@ padding:12px;
 <a class="github" href="/gh" target="_blank" rel="noopener">github</a>
 <a class="discord" href="/discord" target="_blank" rel="noopener">discord</a>
 
-<div class="footer">
-© 2026 Inlayo
 </div>
 
+<div class="footer">
+© 2026 Inlayo
 </div>
 
 </body>
