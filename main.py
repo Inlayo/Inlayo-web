@@ -25,14 +25,19 @@ def root():
 100% {background-position:0% 50%}
 }
 
-body {
+html, body {
 margin:0;
-min-height:100vh;
+height:100%;
+overflow:hidden;
+}
+
+body {
+height:100dvh;
 display:grid;
 place-items:center;
+
 font-family:Segoe UI, sans-serif;
 color:white;
-padding:20px;
 
 background: linear-gradient(
 -45deg,
@@ -48,10 +53,10 @@ animation:bgMove 16s ease infinite;
 
 .card {
 
-width:100%;
+width:75vw;
 max-width:380px;
 
-padding:38px 32px;
+padding:38px 28px;
 
 display:flex;
 flex-direction:column;
@@ -64,6 +69,8 @@ border-radius:18px;
 
 box-shadow:
 0 10px 40px rgba(0,0,0,0.45);
+
+box-sizing:border-box;
 
 }
 
@@ -116,7 +123,8 @@ box-shadow:
 @media (max-width:480px){
 
 .card{
-padding:30px 22px;
+width:75vw;
+padding:28px 20px;
 }
 
 h1{
@@ -139,13 +147,13 @@ padding:12px;
 
 <h1>hello i'm Inlayo 💩</h1>
 
-<a href="/osu">osu!</a>
-<a href="/skins">skins</a>
-<a href="/tw">twitter</a>
-<a href="/ttv">twitch</a>
-<a href="/yt">youtube</a>
-<a href="/gh">github</a>
-<a href="/discord">discord</a>
+<a href="/osu" target="_blank" rel="noopener">osu!</a>
+<a href="/skins" target="_blank" rel="noopener">skins</a>
+<a href="/tw" target="_blank" rel="noopener">twitter</a>
+<a href="/ttv" target="_blank" rel="noopener">twitch</a>
+<a href="/yt" target="_blank" rel="noopener">youtube</a>
+<a href="/gh" target="_blank" rel="noopener">github</a>
+<a href="/discord" target="_blank" rel="noopener">discord</a>
 
 </div>
 
