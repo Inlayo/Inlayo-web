@@ -175,6 +175,12 @@ box-shadow:
 0 0 28px rgba(88,101,242,.6);
 }
 
+.mutualify:hover{
+box-shadow:
+0 0 18px rgba(120,255,200,.9),
+0 0 28px rgba(120,255,200,.6);
+}
+
 .footer{
 margin-top:14px;
 font-size:13px;
@@ -215,6 +221,7 @@ padding:12px;
 <a class="youtube" href="/yt" target="_blank" rel="noopener">youtube</a>
 <a class="github" href="/gh" target="_blank" rel="noopener">github</a>
 <a class="discord" href="/discord" target="_blank" rel="noopener">discord</a>
+<a class="mutualify" href="/mutualify" target="_blank" rel="noopener">mutualify</a>
 
 </div>
 
@@ -285,6 +292,14 @@ def redirect_to_twitch():
 def redirect_to_discord():
     return RedirectResponse(
         url="https://discord.gg/6PskvYDkpQ",
+        status_code=302,
+    )
+
+
+@app.get("/mutualify")
+def redirect_to_mutualify():
+    return RedirectResponse(
+        url="https://mutualify.stanr.info/users/27692994",
         status_code=302,
     )
 
