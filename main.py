@@ -220,7 +220,7 @@ padding:12px;
 <a class="twitch" href="/ttv" target="_blank" rel="noopener">twitch</a>
 <a class="youtube" href="/yt" target="_blank" rel="noopener">youtube</a>
 <a class="github" href="/gh" target="_blank" rel="noopener">github</a>
-<a class="discord" href="/discord" target="_blank" rel="noopener">discord</a>
+<a class="discord" href="/okcdiscord" target="_blank" rel="noopener">discord</a>
 <a class="mutualify" href="/mutualify" target="_blank" rel="noopener">mutualify</a>
 
 </div>
@@ -295,6 +295,12 @@ def redirect_to_discord():
         status_code=302,
     )
 
+@app.get("/okcdiscord")
+def redirect_to_discord():
+    return RedirectResponse(
+        url="https://discord.gg/2bW9UpuJeN",
+        status_code=302,
+    )
 
 @app.get("/mutualify")
 def redirect_to_mutualify():
