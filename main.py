@@ -212,16 +212,14 @@ padding:12px;
 
 <div class="card">
 
-<h1>hello i'm Inlayo 💩</h1>
-
 <a class="osu" href="/osu" target="_blank" rel="noopener">osu!</a>
 <a class="skins" href="/skins" target="_blank" rel="noopener">skins</a>
 <a class="twitter" href="/tw" target="_blank" rel="noopener">twitter</a>
 <a class="twitch" href="/ttv" target="_blank" rel="noopener">twitch</a>
 <a class="youtube" href="/yt" target="_blank" rel="noopener">youtube</a>
 <a class="github" href="/gh" target="_blank" rel="noopener">github</a>
-<a class="discord" href="/discord" target="_blank" rel="noopener">discord</a>
 <a class="mutualify" href="/mutualify" target="_blank" rel="noopener">mutualify</a>
+<a class="Inlayo-osu" href="/Inlayo" target="_blank" rel="noopener">Inlayo</a>
 
 </div>
 
@@ -288,17 +286,18 @@ def redirect_to_twitch():
     )
 
 
-@app.get("/discord")
-def redirect_to_discord():
-    return RedirectResponse(
-        url="https://discord.gg/6PskvYDkpQ",
-        status_code=302,
-    )
-
 @app.get("/mutualify")
 def redirect_to_mutualify():
     return RedirectResponse(
         url="https://mutualify.stanr.info/users/27692994",
+        status_code=302,
+    )
+
+
+@app.get("/Inlayo")
+def redirect_to_mutualify():
+    return RedirectResponse(
+        url="https://osu.inlayo.com",
         status_code=302,
     )
 
