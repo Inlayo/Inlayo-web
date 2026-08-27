@@ -169,16 +169,16 @@ box-shadow:
 0 0 28px rgba(255,255,255,.6);
 }
 
-.discord:hover{
-box-shadow:
-0 0 18px rgba(88,101,242,.9),
-0 0 28px rgba(88,101,242,.6);
-}
-
 .mutualify:hover{
 box-shadow:
 0 0 18px rgba(120,255,200,.9),
 0 0 28px rgba(120,255,200,.6);
+}
+
+.Inlayo-osu:hover{
+box-shadow:
+0 0 18px rgba(88,101,242,.9),
+0 0 28px rgba(88,101,242,.6);
 }
 
 .footer{
@@ -211,6 +211,8 @@ padding:12px;
 <body>
 
 <div class="card">
+
+<h1>Inlayo linktree 🌳</h1>
 
 <a class="osu" href="/osu" target="_blank" rel="noopener">osu!</a>
 <a class="skins" href="/skins" target="_blank" rel="noopener">skins</a>
