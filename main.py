@@ -18,7 +18,7 @@ def root():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
 
 @keyframes bgMove {
 0% {background-position:0% 50%}
@@ -45,8 +45,9 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 
-font-family:"Comic Relief", system-ui;
-font-weight:400;
+font-family: "Sniglet", system-ui;
+font-weight: 400;
+font-style: normal;
 
 color:white;
 
@@ -103,9 +104,9 @@ box-sizing:border-box;
 }
 
 h1 {
-margin-bottom:26px;
-font-size:26px;
-font-weight:700;
+margin-bottom:22px;
+font-size:22px;
+font-weight:500;
 text-align:center;
 }
 
@@ -212,7 +213,7 @@ padding:12px;
 
 <div class="card">
 
-<h1>Inlayo linktree 🌳</h1>
+<h1>Inlayo linktree🌳</h1>
 
 <a class="osu" href="/osu" target="_blank" rel="noopener">osu!</a>
 <a class="skins" href="/skins" target="_blank" rel="noopener">skins</a>
@@ -221,7 +222,7 @@ padding:12px;
 <a class="youtube" href="/yt" target="_blank" rel="noopener">youtube</a>
 <a class="github" href="/gh" target="_blank" rel="noopener">github</a>
 <a class="mutualify" href="/mutualify" target="_blank" rel="noopener">mutualify</a>
-<a class="Inlayo-osu" href="/Inlayo" target="_blank" rel="noopener">Inlayo</a>
+<a class="Inlayo-osu" href="/Inlayo" target="_blank" rel="noopener">Inlayo-osu</a>
 
 </div>
 
